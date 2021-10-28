@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "serve": "./node_modules/.bin/esbuild src/index.ts --bundle --minify --outfile=dist/bundle.js --platform=node && nodemon dist/bundle.js"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,10 @@
     "git-commit-msg-linter": "^3.2.8",
     "husky": "^7.0.4",
     "lint-staged": "^11.2.6",
+    "nodemon": "^2.0.14",
     "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "esbuild": "^0.13.10"
   }
 }
