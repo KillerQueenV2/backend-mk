@@ -10,7 +10,7 @@ const PedidosSchema = new mongoose.Schema({
     required: true
   },
   userId: {
-    type: Number,
+    type: String,
     required: true
   },
   selectedProductIds: {
@@ -19,10 +19,6 @@ const PedidosSchema = new mongoose.Schema({
   },
   selectedProductQtds: {
     type: String,
-    required: true
-  },
-  quantidade: {
-    type: Number,
     required: true
   }
 })
