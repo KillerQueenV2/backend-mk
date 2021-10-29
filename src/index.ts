@@ -11,8 +11,7 @@ app.use('/users', UserRoutes)
 app.use('/products', ProductRoutes)
 app.use('/purchases', PurchaseRoutes)
 
-const prod = (process.env as any).PORT
-const port = typeof prod === 'number' || 3000
+const port = ((process.env as any).PORT !== undefined) ? (process.env as any).PORT : 3000
 
 app.listen(port, () => {
   console.log(`it's alive on http://localhost:${String(port)}`)
